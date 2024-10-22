@@ -1,0 +1,78 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* منع التمرير */
+}
+
+.background {
+    position: absolute; /* طبقة الخلفية تكون مطوية */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('image5.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(5px); /* ضبط مقدار الضبابية هنا */
+    z-index: 0; /* إرسال الخلفية إلى الخلف */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* لون الخلفية مع الشفافية */
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    max-width: 400px;
+    width: 90%;
+    position: relative; /* تهيئة موضع العناصر */
+    z-index: 1; /* جلب الحاوية للأمام */
+}
+
+.title {
+    color: #4a4a4a;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    color: #888;
+}
